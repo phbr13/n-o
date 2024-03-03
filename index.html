@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="check.png" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
     <title>Daily Tasks</title>
 </head>
 <body>
@@ -41,6 +42,11 @@
                 })
                 elemento.children[0].setAttribute("data-checked", "0")
             }
+        }
+    </script>
+    <script>
+        if (typeof navigator.serviceWorker !== 'undefined') {
+            navigator.serviceWorker.register('pwabuilder-sw.js')
         }
     </script>
 </body>

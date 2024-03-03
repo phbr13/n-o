@@ -1,0 +1,19 @@
+{
+    "background_color": "#161616",
+    "dir": "ltr",
+    "display": "standalone",
+    "name": "Daily Tasks",
+    "orientation": "any",
+    "scope": "/",
+    "short_name": "Daily Tasks",
+    "start_url": "/",
+    "theme_color": "#161616",
+    "icons": [
+      {
+        "src": "check.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "lang": "pt"
+  }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="check.png" type="image/x-icon">
+    <title>Daily Tasks</title>
+</head>
+<body>
+    <h1>Daily Tasks</h1>
+    <h3>Segunda-feira</h3>
+    <hr>
+    <div id="tasks">
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script>
+        function checar(elemento) {
+            const checked =  elemento.children[0].getAttribute("data-checked")
+            if (checked == '0') {
+                gsap.to(elemento.children, {
+                    scale: 1,
+                    ease: "back.out(1.7)",
+                    duration: 0.3
+                })
+                gsap.to(elemento.parentElement, {
+                    opacity: 0.75,
+                    duration: 0.3
+                })
+                elemento.children[0].setAttribute("data-checked", "1")
+            } else {
+                gsap.to(elemento.children, {
+                    scale: 0,
+                    ease: "sine.inOut",
+                    duration: 0.3
+                })
+                gsap.to(elemento.parentElement, {
+                    opacity: 1,
+                    duration: 0.3
+                })
+                elemento.children[0].setAttribute("data-checked", "0")
+            }
+        }
+    </script>
+</body>
+</html>
